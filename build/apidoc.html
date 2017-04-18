@@ -1,0 +1,2437 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/epha/rescode"
+
+    >rescode (v0.1.10)</a>
+</h1>
+<h4>Generate Codes (EAN13, QRCODE ..)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.rescode">module rescode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip">
+            function <span class="apidocSignatureSpan">rescode.</span>bwip
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.create">
+            function <span class="apidocSignatureSpan">rescode.</span>create
+            <span class="apidocSignatureSpan">( type, text, options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.loadModules">
+            function <span class="apidocSignatureSpan">rescode.</span>loadModules
+            <span class="apidocSignatureSpan">(modules, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">rescode.</span>bwip.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">rescode.</span>codes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.rescode.bwip">module rescode.bwip</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.bwip">
+            function <span class="apidocSignatureSpan">rescode.</span>bwip
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.debug">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>debug
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.fillmap">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>fillmap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.print">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>print
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.psarray">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>psarray
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.psstring">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>psstring
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.pstostring">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>pstostring
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.pstype">
+            function <span class="apidocSignatureSpan">rescode.bwip.</span>pstype
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">rescode.bwip.</span>bwipp</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">rescode.bwip.</span>fonts</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.rescode.bwip.prototype">module rescode.bwip.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.arc">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>arc
+            <span class="apidocSignatureSpan">(x, y, r, sa, ea, ccw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.bitmap">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>bitmap
+            <span class="apidocSignatureSpan">(bmap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.call">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>call
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.charpath">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>charpath
+            <span class="apidocSignatureSpan">(str, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.closepath">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>closepath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.currentfont">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>currentfont
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.currentpoint">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>currentpoint
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.drawarc">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>drawarc
+            <span class="apidocSignatureSpan">(x0, y0, x1, y1, sa, se, penx, peny)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.drawline">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>drawline
+            <span class="apidocSignatureSpan">(optmz, x1, y1, x2, y2, penx, peny, merge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.dtransform">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>dtransform
+            <span class="apidocSignatureSpan">(mtx, dx, dy)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.eval">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>eval
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.fill">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>fill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.findfont">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>findfont
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.gclone">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>gclone
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.getfont">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>getfont
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.greset">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>greset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.grestore">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>grestore
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.gsave">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>gsave
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.imagemask">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>imagemask
+            <span class="apidocSignatureSpan">(width, height, polarity, matrix, source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.lineto">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>lineto
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.moveto">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>moveto
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.newpath">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>newpath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.pathbbox">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>pathbbox
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.pop">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>pop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.push">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>push
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.rlineto">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>rlineto
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.rmoveto">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>rmoveto
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.scale">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>scale
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.setcmyk">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setcmyk
+            <span class="apidocSignatureSpan">(c, m, y, k)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.setfont">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setfont
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.setlinewidth">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setlinewidth
+            <span class="apidocSignatureSpan">(w)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.setrgb">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setrgb
+            <span class="apidocSignatureSpan">(r, g, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.show">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>show
+            <span class="apidocSignatureSpan">(str, dx, dy)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.stringwidth">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>stringwidth
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.stroke">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>stroke
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.translate">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>translate
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.bwip.prototype.value">
+            function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>value
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.rescode.codes">module rescode.codes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.codes.create">
+            function <span class="apidocSignatureSpan">rescode.codes.</span>create
+            <span class="apidocSignatureSpan">( type, text, options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.rescode.codes.loadModules">
+            function <span class="apidocSignatureSpan">rescode.codes.</span>loadModules
+            <span class="apidocSignatureSpan">(modules, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.rescode" id="apidoc.module.rescode">module rescode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip" id="apidoc.element.rescode.bwip">
+        function <span class="apidocSignatureSpan">rescode.</span>bwip
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bwip = function () {
+	
+	// PostScript state
+	this.ptr	= 0;				// operand stack pointer
+	this.stk	= [];				// operand stack
+	this.dict 	= {};				// current dictionary
+	this.dstk	= [this.dict];		// dictionary stack
+	this.gstk	= [];				// graphics state stack
+	this.bmap	= null;				// host bitmap instance
+
+	// dict-stack lookup
+	this.dstk.get = function(id) {
+		for (var i = this.length-1; i &#x3e;= 0; i--) {
+			if (this[i][id] !== undefined) {
+				//BWIPJS.print(&#x27;dstk::get=&#x27; + BWIPJS.pstostring(this[i][id]) +
+				//	&#x27; (&#x27; + (this[i][id] instanceof Function) + &#x27;)&#x27;);
+				return this[i][id];
+			}
+		}
+	};
+
+	// Initialize the graphics
+	this.greset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.create" id="apidoc.element.rescode.create">
+        function <span class="apidocSignatureSpan">rescode.</span>create
+        <span class="apidocSignatureSpan">( type, text, options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function ( type, text, options )
+{
+	// CODER AVAILABLE
+    var opts = ( types[ type ] ) ? options || types[ type ] : null;
+
+    // BAD REQUEST
+    if( !type || !text || !opts ) return null;
+
+	// DEFAULTS
+	var rot = opts.rot || &#x22;N&#x22;;
+	var scaleX = opts.scaleX || 1;
+	var scaleY = opts.scaleY || 1;
+
+	// GENERATE
+	var bw = new BWIPJS();
+	bw.bitmap(new adapter);
+	bw.push(text);
+	bw.push(opts);
+    bw.scale(scaleX, scaleY);
+
+	bw.call(type);
+	return bw.bitmap().create(rot);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var codes = require(&#x22;rescode&#x22;);
+
+	function( res, req )
+	{
+// Sequence is important
+		codes.loadModules([&#x22;ean2&#x22;, &#x22;ean5&#x22;, &#x22;ean8&#x22;, &#x22;ean13&#x22;]);
+		
+		var data8 = codes.<span class="apidocCodeKeywordSpan">create</span>(&#x22;ean8&#x22;,&#x22;12345678&#x22;);
+
+res.setHeader(&#x22;Content-Type&#x22;,&#x22;image/png&#x22;);
+		res.end( data8 );
+
+OR
+
+res.end(&#x22;&#x3c;html&#x3e;&#x3c;img src=&#x27;data:image/png;base64,&#x22;+data8.toString(&#x22;base64&#x22;)+&#x22;&#x27; /&#
+x3e;&#x3c;/html&#x3e;&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.loadModules" id="apidoc.element.rescode.loadModules">
+        function <span class="apidocSignatureSpan">rescode.</span>loadModules
+        <span class="apidocSignatureSpan">(modules, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadModules = function (modules, opts)
+{
+        modules.forEach(function(m) {
+				types.addExport(m, opts ? opts : { &#x22;includetext&#x22;:true, &#x22;guardwhitespace&#x22;:false, &#x22;inkspread&#x22;:0, scaleX:2, textyoffset:-15 });
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Example loading specific barcode types
+---------------------------------------
+	var codes = require(&#x22;rescode&#x22;);
+
+	function( res, req )
+	{
+// Sequence is important
+		codes.<span class="apidocCodeKeywordSpan">loadModules</span>([&#x22;ean2&#x22;, &#x22;ean5&#x22;, &#x22;ean8&#x22;, &#x22;ean13
+&#x22;]);
+		
+		var data8 = codes.create(&#x22;ean8&#x22;,&#x22;12345678&#x22;);
+
+res.setHeader(&#x22;Content-Type&#x22;,&#x22;image/png&#x22;);
+		res.end( data8 );
+
+OR
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.rescode.bwip" id="apidoc.module.rescode.bwip">module rescode.bwip</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.bwip" id="apidoc.element.rescode.bwip.bwip">
+        function <span class="apidocSignatureSpan">rescode.</span>bwip
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bwip = function () {
+	
+	// PostScript state
+	this.ptr	= 0;				// operand stack pointer
+	this.stk	= [];				// operand stack
+	this.dict 	= {};				// current dictionary
+	this.dstk	= [this.dict];		// dictionary stack
+	this.gstk	= [];				// graphics state stack
+	this.bmap	= null;				// host bitmap instance
+
+	// dict-stack lookup
+	this.dstk.get = function(id) {
+		for (var i = this.length-1; i &#x3e;= 0; i--) {
+			if (this[i][id] !== undefined) {
+				//BWIPJS.print(&#x27;dstk::get=&#x27; + BWIPJS.pstostring(this[i][id]) +
+				//	&#x27; (&#x27; + (this[i][id] instanceof Function) + &#x27;)&#x27;);
+				return this[i][id];
+			}
+		}
+	};
+
+	// Initialize the graphics
+	this.greset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.debug" id="apidoc.element.rescode.bwip.debug">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>debug
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (s) {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		this.g_path.push([&#x27;c&#x27;]);
+		this.g_path.push([ c0[0], c0[1] ]);
+	}
+}
+BWIPJS.prototype.moveto = function(x,y) {
+	this.g_posx = this.g_tdx + this.g_tsx * x;
+	this.g_posy = this.g_tdy + this.g_tsy * y;
+	BWIPJS.<span class="apidocCodeKeywordSpan">debug</span>(&#x27;moveto: posx,posy=(&#x27; + this.g_posx + &#x27;,&#x27; + this.g_posy
+ + &#x27;)&#x27;);
+}
+BWIPJS.prototype.rmoveto = function(x,y) {
+	this.g_posx += this.g_tsx * x;
+	this.g_posy += this.g_tsy * y;
+	BWIPJS.debug(&#x27;rmoveto: posx,posy=(&#x27; + this.g_posx + &#x27;,&#x27; + this.g_posy + &#x27;)&#x27;);
+}
+BWIPJS.prototype.lineto = function(x,y) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.fillmap" id="apidoc.element.rescode.bwip.fillmap">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>fillmap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fillmap = function () {
+	var bmap = [];
+	var minx = Infinity;
+	var miny = Infinity;
+	var maxx = -Infinity;
+	var maxy = -Infinity;
+
+	this.set = function(x,y) {
+		x = ~~x;
+		y = ~~y;
+
+		if (!bmap[y])
+			bmap[y] = [];
+		bmap[y][x] = 0;
+
+		if (minx &#x3e; x)	minx = x;
+		if (maxx &#x3c; x)	maxx = x;
+		if (miny &#x3e; y)	miny = y;
+		if (maxy &#x3c; y)	maxy = y;
+	}
+
+	function get(x,y) {
+		//return (bmap[y] ? bmap[y][x] : undefined);
+		return bmap[y][x];
+	}
+	function inv(x,y) {
+		bmap[y][x] = bmap[y][x] == 1 ? undefined : 1;
+	}
+
+	// A very simplistic filling algorithm - will only handle regular shapes
+	this.fill = function() {
+		var x0 = Math.floor(minx + (maxx-minx) / 2);
+		var y0 = Math.floor(miny + (maxy-miny) / 2);
+
+		// Fill up
+		for (var y = y0; y &#x3c;= maxy; y++) {
+			// Find the bounds for this line
+			for (var t0 = minx; t0 &#x3c;= maxx &#x26;&#x26; get(t0,y) !== 0; t0++);
+			for (var t1 = maxx; t1 &#x3e;= minx &#x26;&#x26; get(t1,y) !== 0; t1--);
+			while (t0 &#x3c;= t1)
+				inv(t0++, y);
+		}
+
+		// Fill down
+		for (var y = y0-1; y &#x3e;= miny; y--) {
+			// Find the bounds for this line
+			for (var t0 = minx; t0 &#x3c;= maxx &#x26;&#x26; get(t0,y) !== 0; t0++);
+			for (var t1 = maxx; t1 &#x3e;= minx &#x26;&#x26; get(t1,y) !== 0; t1--);
+			while (t0 &#x3c;= t1)
+				inv(t0++, y);
+		}
+	}
+
+	this.xfer = function(bmap) {
+		var x0 = minx;
+		var x1 = maxx;
+		var y0 = miny;
+		var y1 = maxy;
+
+		var out = &#x27;&#x27;;
+		for (var y = y0; y &#x3c;= y1; y++) {
+			for (var x = x0; x &#x3c;= x1; x++) {
+				if (get(x,y) === 1)
+					bmap.set(x,y);
+				out += get(x,y) === 1 ? &#x27;X&#x27; : &#x27;0&#x27;;
+			}
+			out += &#x27;\r\n&#x27;;
+		}
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.print" id="apidoc.element.rescode.bwip.print">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>print
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">print = function (s) {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.gstk	= [];				// graphics state stack
+	this.bmap	= null;				// host bitmap instance
+
+	// dict-stack lookup
+	this.dstk.get = function(id) {
+		for (var i = this.length-1; i &#x3e;= 0; i--) {
+			if (this[i][id] !== undefined) {
+				//BWIPJS.<span class="apidocCodeKeywordSpan">print</span>(&#x27;dstk::get=&#x27; + BWIPJS.pstostring(this[i][id]) +
+				//	&#x27; (&#x27; + (this[i][id] instanceof Function) + &#x27;)&#x27;);
+				return this[i][id];
+			}
+		}
+	};
+
+	// Initialize the graphics
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.psarray" id="apidoc.element.rescode.bwip.psarray">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>psarray
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">psarray = function (v) {
+	if (!(this instanceof BWIPJS.psarray))
+		return new BWIPJS.psarray(v);
+
+	if (typeof(v) == &#x22;number&#x22;) {
+		var a = [];
+		for (var i = 0; i &#x3c; v; i++)
+			a[i] = null;
+
+		this.value  = a;
+		this.length = v;
+		this.offset = 0;
+	}
+	else if (v instanceof Array) {
+		this.value  = v;
+		this.offset = 0;
+		this.length = v.length;
+	}
+	else {	// v is a psarray
+		this.value  = [];
+		this.length = v.length;
+		this.offset = 0;
+
+		for (var i = 0; i &#x3c; v.length; i++)
+			this.value[i] = v.value[v.offset+i];
+	}
+	// Define the indexes (just for show) so forall works correctly.
+	// The actual implementation uses get/set.
+	for (var i = 0; i &#x3c; this.length; i++)
+		this[i] = undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Host-specific overrides
+BWIPJS.print = function(s) {};
+BWIPJS.debug = function(s) {};
+//BWIPJS.load  = function(s) {};	// force a run-time error	
+
+BWIPJS.psarray = function(v) {
+	if (!(this instanceof BWIPJS.psarray))
+		return new BWIPJS.<span class="apidocCodeKeywordSpan">psarray</span>(v);
+
+	if (typeof(v) == &#x22;number&#x22;) {
+		var a = [];
+		for (var i = 0; i &#x3c; v; i++)
+			a[i] = null;
+
+		this.value  = a;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.psstring" id="apidoc.element.rescode.bwip.psstring">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>psstring
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">psstring = function (v) {
+	if (!(this instanceof BWIPJS.psstring))
+		return new BWIPJS.psstring(v);
+
+	if (typeof(v) == &#x27;number&#x27;) {
+		this.value  = [];
+		this.length = v;
+		this.offset = 0;
+
+		for (var i = 0; i &#x3c; v; i++)
+			this.value[i] = 0;
+	}
+	else if (typeof(v) == &#x27;string&#x27;) {
+		this.value  = [];
+		this.length = v.length;
+		this.offset = 0;
+		for (var i = 0; i &#x3c; v.length; i++)
+			this.value[i] = v.charCodeAt(i);
+	}
+	else { // v is a psstring
+		this.value  = [];
+		this.length = v.length;
+		this.offset = 0;
+
+		for (var i = 0; i &#x3c; v.length; i++)
+			this.value[i] = v.value[v.offset+i];
+	}
+	// Define the indexes (just for show) so forall works correctly.
+	// The actual implementation uses get/set.
+	for (var i = 0; i &#x3c; this.length; i++)
+		this[i] = NaN;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	else
+		for (var i = 0; i &#x3c; source.length; i++)
+			this.value[this.offset+offset+i] = source.value[source.offset+i];
+}
+
+BWIPJS.psstring = function(v) {
+	if (!(this instanceof BWIPJS.psstring))
+		return new BWIPJS.<span class="apidocCodeKeywordSpan">psstring</span>(v);
+
+	if (typeof(v) == &#x27;number&#x27;) {
+		this.value  = [];
+		this.length = v;
+		this.offset = 0;
+
+		for (var i = 0; i &#x3c; v; i++)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.pstostring" id="apidoc.element.rescode.bwip.pstostring">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>pstostring
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pstostring = function (v) {
+	// null can cause trouble - get it out of the way
+	if (v === null)
+		return &#x27;null&#x27;;
+	if (typeof(v) == &#x27;function&#x27;)
+		return &#x27;--function--&#x27;;
+	if (v instanceof BWIPJS.psarray)
+		return v.toString();
+	if (v instanceof BWIPJS.psstring) {
+		// postscript strings often contain binary data...
+		var s = &#x27;(&#x27;;
+		for (var i = 0; i &#x3c; v.length; i++) {
+			var cd = v.value[v.offset+i];
+			switch (cd) {
+			case 92:	s += &#x27;\\\\&#x27;;	break;
+			case 10:	s += &#x27;\\n&#x27;;		break;
+			case 13:	s += &#x27;\\r&#x27;;		break;
+			case  9:	s += &#x27;\\t&#x27;;		break;
+			case  8:	s += &#x27;\\b&#x27;;		break;
+			case 40:	s += &#x27;\\(&#x27;;		break;
+			case 41:	s += &#x27;\\)&#x27;;		break;
+			default:
+				if (cd &#x3c; 32 || cd &#x3e; 127)
+					s += &#x27;\\&#x27;+(function(s) { return &#x27;000&#x27;.substr(s.length)+s; })(cd.toString(8));
+				else
+					s += String.fromCharCode(cd);
+			}
+		}
+		return s + &#x27;)&#x27;;
+	}
+	if (typeof(v) == &#x27;object&#x27;) {
+		var s = &#x27;&#x27;;
+		for (var i in v)
+			s += &#x27; /&#x27; + i + &#x27; &#x27; + BWIPJS.pstostring(v[i]);
+		return &#x27;&#x3c;&#x3c;&#x27; + s + &#x27; &#x3e;&#x3e;&#x27;;
+	}
+	// Watch for the usual floating-point nonsense
+	if (typeof(v) == &#x27;number&#x27; &#x26;&#x26; v % 1) {
+		return v.toPrecision(12).replace(/0*$/,&#x27;&#x27;);
+	}
+	return &#x27;&#x27; + v;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.gstk	= [];				// graphics state stack
+	this.bmap	= null;				// host bitmap instance
+
+	// dict-stack lookup
+	this.dstk.get = function(id) {
+		for (var i = this.length-1; i &#x3e;= 0; i--) {
+			if (this[i][id] !== undefined) {
+				//BWIPJS.print(&#x27;dstk::get=&#x27; + BWIPJS.<span class="apidocCodeKeywordSpan">pstostring</span>(this[i][id]) +
+				//	&#x27; (&#x27; + (this[i][id] instanceof Function) + &#x27;)&#x27;);
+				return this[i][id];
+			}
+		}
+	};
+
+	// Initialize the graphics
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.pstype" id="apidoc.element.rescode.bwip.pstype">
+        function <span class="apidocSignatureSpan">rescode.bwip.</span>pstype
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pstype = function (v) {
+	// null can cause trouble - get it out of the way
+	if (v === null || v === undefined)
+		return &#x27;nulltype&#x27;;
+
+	var t = typeof(v);
+	if (t == &#x27;number&#x27;)
+		return v % 1 ? &#x27;realtype&#x27; : &#x27;integertype&#x27;;
+	if (t == &#x27;boolean&#x27;)
+		return &#x27;booleantype&#x27;;
+
+	if (v instanceof BWIPJS.psarray)
+		return &#x27;arraytype&#x27;;
+	if (v instanceof BWIPJS.psstring)
+		return &#x27;stringtype&#x27;;
+
+	return &#x27;dicttype&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.rescode.bwip.prototype" id="apidoc.module.rescode.bwip.prototype">module rescode.bwip.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.arc" id="apidoc.element.rescode.bwip.prototype.arc">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>arc
+        <span class="apidocSignatureSpan">(x, y, r, sa, ea, ccw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arc = function (x, y, r, sa, ea, ccw) {
+	if (sa == ea)
+		return;
+
+	// TBD: For now, we only implement full circles...
+	if (sa != 0 &#x26;&#x26; sa != 360 || ea != 0 &#x26;&#x26; ea != 360)
+		throw &#x27;arc: not a full circle (&#x27; + sa + &#x27;,&#x27; + ea + &#x27;)&#x27;;
+
+	// Calculate the bounding rect
+	x = this.g_tdx + this.g_tsx * x;
+	y = this.g_tdy + this.g_tsy * y;
+
+	var rx = r * this.g_tsx;
+	var ry = r * this.g_tsy;
+
+	this.g_path.push([ x-rx, y-ry ]);
+	this.g_path.push([ &#x27;a&#x27;, { x:x, y:y, rx:rx, ry:ry, sa:sa, ea:ea, ccw:ccw } ]);
+	this.g_path.push([ x+rx, y+ry ]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.bitmap" id="apidoc.element.rescode.bwip.prototype.bitmap">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>bitmap
+        <span class="apidocSignatureSpan">(bmap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bitmap = function (bmap) {
+	if (!bmap)
+		return this.bmap;
+	this.bmap = bmap;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// DEFAULTS
+	var rot = opts.rot || &#x22;N&#x22;;
+	var scaleX = opts.scaleX || 1;
+	var scaleY = opts.scaleY || 1;
+
+	// GENERATE
+	var bw = new BWIPJS();
+	bw.<span class="apidocCodeKeywordSpan">bitmap</span>(new adapter);
+	bw.push(text);
+	bw.push(opts);
+    bw.scale(scaleX, scaleY);
+
+	bw.call(type);
+	return bw.bitmap().create(rot);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.call" id="apidoc.element.rescode.bwip.prototype.call">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>call
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">call = function (name) {
+	// Make sure the encoder is loaded
+	if (!BWIPJS.bwipp[name])
+		BWIPJS.load(&#x27;bwipp/&#x27; + name + &#x27;.js&#x27;);
+	
+	if (!BWIPJS.bwipp[name])
+		throw name + &#x27;: --undefined--&#x27;;
+
+	// Load into the dictionary
+	this.dict[name] = BWIPJS.bwipp[name];
+
+	// Make the call
+	BWIPJS.bwipp[name].call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	if (!BWIPJS.bwipp[name])
+		throw name + &#x27;: --undefined--&#x27;;
+
+	// Load into the dictionary
+	this.dict[name] = BWIPJS.bwipp[name];
+
+	// Make the call
+	BWIPJS.bwipp[name].<span class="apidocCodeKeywordSpan">call</span>(this);
+}
+// eval on a psstring - emulates postscript &#x27;&#x3c;string&#x3e; exec&#x27;.
+// BWIPP only requires support for two forms of eval; hex string literals in
+// the form &#x3c;rrggbb&#x3e; and &#x3c;ccmmyykk&#x3e;.
+BWIPJS.prototype.eval = function(src) {
+	src = src.toString();	// work with a javascript string
+	if (!/^&#x3c;(([0-9A-F][0-9A-F])*)&#x3e;$/i.test(src))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.charpath" id="apidoc.element.rescode.bwip.prototype.charpath">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>charpath
+        <span class="apidocSignatureSpan">(str, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">charpath = function (str, b) {
+	var sw = this.stringwidth(str);
+
+	// Emulate the char-path by placing a rectangle around it
+	this.rlineto(sw.w, 0);
+	this.rlineto(0, sw.h);
+	this.rlineto(-sw.w, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.closepath" id="apidoc.element.rescode.bwip.prototype.closepath">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>closepath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closepath = function () {
+	if (this.g_path.length)  {
+		var c0 = this.g_path[0];
+		var c1 = this.g_path[this.g_path.length-1];
+		this.g_path.push([ c1[0], c1[1] ]);
+		this.g_path.push([&#x27;c&#x27;]);
+		this.g_path.push([ c0[0], c0[1] ]);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+	this.g_path = [];
+}
+BWIPJS.prototype.fill = function() {
+	if (!this.g_path.length)						 // Nothing to do?
+		return;
+	if (this.g_path[this.g_path.length-2][0] != &#x27;c&#x27;) // Is the path closed?
+		this.<span class="apidocCodeKeywordSpan">closepath</span>();
+
+	// Save off the existing bitmap and install a custom one for
+	// fast filling
+	var bmap = this.bmap;
+	this.bmap = new BWIPJS.fillmap;
+
+	for (var i = 0; i &#x3c; this.g_path.length; ) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.currentfont" id="apidoc.element.rescode.bwip.prototype.currentfont">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>currentfont
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">currentfont = function () {
+	return this.g_font;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.currentpoint" id="apidoc.element.rescode.bwip.prototype.currentpoint">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>currentpoint
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">currentpoint = function () {
+	return { x:(this.g_posx-this.g_tdx)/this.g_tsx, y:(this.g_posy-this.g_tdy)/this.g_tsy };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.drawarc" id="apidoc.element.rescode.bwip.prototype.drawarc">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>drawarc
+        <span class="apidocSignatureSpan">(x0, y0, x1, y1, sa, se, penx, peny)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawarc = function (x0, y0, x1, y1, sa, se, penx, peny) {
+	var a = Math.abs(x1-x0);
+	var b = Math.abs(y1-y0);
+	var b1 = b &#x26; 1;
+	var dx = 4*(1-a)*b*b;
+	var dy = 4*(b1+1)*a*a;
+	var err = dx + dy + b1*a*a;
+	var e2;
+
+	if (x0 &#x3e; x1) { x0 = x1; x1 += a; }
+	if (y0 &#x3e; y1) y0 = y1;
+	y0 += Math.floor((b+1)/2);
+	y1 = y0 - b1;
+	a *= 8*a; b1 = 8*b*b;
+
+	do {
+		this.bmap.set(x1, y0);		// 1st quadrant
+		this.bmap.set(x0, y0);		// 2nd quadrant
+		this.bmap.set(x0, y1);		// 3rd quadrant
+		this.bmap.set(x1, y1);		// 4th quadrant
+		e2 = 2*err;
+		if (e2 &#x3e;= dx) { x0++; x1--; dx += b1; err += dx; }
+		if (e2 &#x3c;= dy) { y0++; y1--; dy += a;  err += dy; }
+	} while (x0 &#x3c;= x1);
+
+	while (y0-y1 &#x3c; b) {	// too early stop of flat ellipse
+		this.bmap.set(x0-1, y0);
+		this.bmap.set(x1+1, y0++);
+		this.bmap.set(x0-1, y1);
+		this.bmap.set(x1+1, y1--);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var a = this.g_path[i++];	// args
+		var e = this.g_path[i++];	// end point
+		switch (a[0]) {
+		case &#x27;l&#x27;:	// line
+			this.drawline(true, s[0], s[1], e[0], e[1], penx, peny, segs &#x3e; 1);
+			break;
+		case &#x27;a&#x27;:
+			this.<span class="apidocCodeKeywordSpan">drawarc</span>(s[0], s[1], e[0], e[1], a[1].sa, a[1].se, penx, peny);
+			break;
+		case &#x27;c&#x27;:	// closepath
+			break;
+		default:
+			throw &#x27;stroke: undefined opcode: &#x27; + a[0];
+		}
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.drawline" id="apidoc.element.rescode.bwip.prototype.drawline">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>drawline
+        <span class="apidocSignatureSpan">(optmz, x1, y1, x2, y2, penx, peny, merge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawline = function (optmz, x1, y1, x2, y2, penx, peny, merge) {
+	if (optmz &#x26;&#x26; (x1 == x2 || y1 == y2)) {
+		var lx = Math.round(penx);
+		var ly = Math.round(peny);
+
+		if (y2 &#x3c; y1) { var t = y1; y1 = y2; y2 = t; }
+		if (x2 &#x3c; x1) { var t = x1; x1 = x2; x2 = t; }
+
+		// Horizontal or vertical line?
+		if (x1 == x2) {
+			// Vertical line
+			x1 = Math.round(x1 - lx/2);
+			x2 = Math.round(x2 + lx/2);
+			y1 = Math.round(y1 - (merge ? ly/2 : 0));
+			y2 = Math.round(y2 + (merge ? ly/2 : 0));
+		} else {
+			// Horizontal line
+			y1 = Math.round(y1 - ly/2);
+			y2 = Math.round(y2 + ly/2);
+			x1 = Math.round(x1 - (merge ? lx/2 : 0));
+			x2 = Math.round(x2 + (merge ? lx/2 : 0));
+		}
+		for (var y = y1; y &#x3c; y2; y++)
+			for (var x = x1; x &#x3c; x2; x++)
+				this.bmap.set(x,y);
+
+		return;
+	}
+
+	// Draw an arbitrary line
+	x1 = Math.floor(x1);
+	x2 = Math.floor(x2);
+	y1 = Math.floor(y1);
+	y2 = Math.floor(y2);
+
+	var du = Math.abs(x2-x1);
+	var dv = Math.abs(y2-y1);
+	var kx = (x2 &#x3c; x1 ? -1 : 1);
+	var ky = (y2 &#x3c; y1 ? -1 : 1);
+	var x  = x1;
+	var y  = y1;
+	var d  = 0;
+
+	// Calculate the effect of pen width
+	var penw = Math.floor(Math.sqrt(penx*penx + peny*peny));
+	var pixh = Math.round(Math.sqrt((penw*penw)/((dv*dv)/(du*du)+1))) || 1;
+	var pixw = Math.round(Math.sqrt(penw*penw-pixh*pixh)) || 1;
+
+	if (du &#x3e;= dv) {
+		// Increment on x
+		while (x != x2) {
+			for (var j = 0; j &#x3c; pixh; j++)
+				this.bmap.set(x, y+j);
+			d += dv;
+			if (d &#x3e;= du) {
+				d -= du;
+				y += ky;
+			}
+			x += kx;
+		}
+		for (var j = 0; j &#x3c; pixh; j++)
+			this.bmap.set(x, y+j);
+	} else {
+		// Increment on y
+		while (y != y2) {
+			for (var j = 0; j &#x3c; pixw; j++)
+				this.bmap.set(x+j, y);
+			d += du;
+			if (d &#x3e;= dv) {
+				d -= dv;
+				x += kx;
+			}
+			y += ky;
+		}
+		for (var j = 0; j &#x3c; pixw; j++)
+			this.bmap.set(x+j, y);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		segs--;
+	for (var i = 0; i &#x3c; this.g_path.length; ) {
+		var s = this.g_path[i++];	// start point
+		var a = this.g_path[i++];	// args
+		var e = this.g_path[i++];	// end point
+		switch (a[0]) {
+		case &#x27;l&#x27;:	// line
+			this.<span class="apidocCodeKeywordSpan">drawline</span>(true, s[0], s[1], e[0], e[1], penx, peny, segs &#x3e; 1);
+			break;
+		case &#x27;a&#x27;:
+			this.drawarc(s[0], s[1], e[0], e[1], a[1].sa, a[1].se, penx, peny);
+			break;
+		case &#x27;c&#x27;:	// closepath
+			break;
+		default:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.dtransform" id="apidoc.element.rescode.bwip.prototype.dtransform">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>dtransform
+        <span class="apidocSignatureSpan">(mtx, dx, dy)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dtransform = function (mtx, dx, dy) {
+	return { dx:dx, dy:dy };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.eval" id="apidoc.element.rescode.bwip.prototype.eval">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>eval
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eval = function (src) {
+	src = src.toString();	// work with a javascript string
+	if (!/^&#x3c;(([0-9A-F][0-9A-F])*)&#x3e;$/i.test(src))
+			throw &#x27;eval: not a hex string literal&#x27;;
+
+	var dst = new BWIPJS.psstring((src.length-2)/2);  // the RE above ensures pairs of digits
+	var idx = 0;
+	for (var i = 1; i &#x3c; src.length-1; i += 2)
+		dst.set(idx++, parseInt(src.substr(i, 2), 16));
+
+	// Push the string onto the stack
+	this.stk[this.ptr++] = dst;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.fill" id="apidoc.element.rescode.bwip.prototype.fill">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>fill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fill = function () {
+	if (!this.g_path.length)						 // Nothing to do?
+		return;
+	if (this.g_path[this.g_path.length-2][0] != &#x27;c&#x27;) // Is the path closed?
+		this.closepath();
+
+	// Save off the existing bitmap and install a custom one for
+	// fast filling
+	var bmap = this.bmap;
+	this.bmap = new BWIPJS.fillmap;
+
+	for (var i = 0; i &#x3c; this.g_path.length; ) {
+		var s = this.g_path[i++];	// start point
+		var a = this.g_path[i++];	// args
+		var e = this.g_path[i++];	// end point
+		switch (a[0]) {
+		case &#x27;l&#x27;:	// line
+			this.drawline(false, s[0], s[1], e[0], e[1], 1, 1);
+			break;
+		case &#x27;a&#x27;:	// arc/arcn
+			this.drawarc(s[0], s[1], e[0], e[1], a[1].sa, a[1].se, 1, 1);
+			break;
+		case &#x27;c&#x27;:	// closepath
+			this.bmap.fill();
+			break;
+		default:
+			throw &#x27;fill: undefined opcode: &#x27; + a[0];
+		}
+	}
+
+	// Transfer the fill to the actual bitmap
+	this.bmap.xfer(bmap);
+
+	// Restore the actual bitmap
+	this.bmap = bmap;
+
+	this.g_path = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		case &#x27;l&#x27;:	// line
+			this.drawline(false, s[0], s[1], e[0], e[1], 1, 1);
+			break;
+		case &#x27;a&#x27;:	// arc/arcn
+			this.drawarc(s[0], s[1], e[0], e[1], a[1].sa, a[1].se, 1, 1);
+			break;
+		case &#x27;c&#x27;:	// closepath
+			this.bmap.<span class="apidocCodeKeywordSpan">fill</span>();
+			break;
+		default:
+			throw &#x27;fill: undefined opcode: &#x27; + a[0];
+		}
+	}
+
+	// Transfer the fill to the actual bitmap
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.findfont" id="apidoc.element.rescode.bwip.prototype.findfont">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>findfont
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findfont = function (name) {	// name is a psstring
+	return { FontName:name };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.gclone" id="apidoc.element.rescode.bwip.prototype.gclone">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>gclone
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gclone = function (o) {
+	if (o instanceof Array) {
+		var t = [];
+		for (var i = 0; i &#x3c; o.length; i++)
+			t[i] = this.gclone(o[i]);
+		return t;
+	}
+	//if (o instanceof Function)
+	//	return o;
+
+	if (o instanceof Object) {
+		var t = {};
+		for (i in o)
+			t[i] = this.gclone(o[i]);
+		return t;
+	}
+	return o;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			 urx:(urx-this.g_tdx)/this.g_tsx, ury:(ury-this.g_tdy)/this.g_tsy };
+}
+BWIPJS.prototype.gsave = function() {
+	// clone all g_ properties
+	var ctx = {};
+	for (id in this)
+		if (id.indexOf(&#x27;g_&#x27;) == 0)
+			ctx[id] = this.<span class="apidocCodeKeywordSpan">gclone</span>(this[id]);
+
+	this.gstk.push(ctx);
+}
+BWIPJS.prototype.grestore = function() {
+	if (!this.gstk.length)
+		throw &#x27;grestore: stack underflow&#x27;;
+	var ctx = this.gstk.pop();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.getfont" id="apidoc.element.rescode.bwip.prototype.getfont">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>getfont
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getfont = function () {
+	// font scale factor
+	var fs = Math.floor(this.g_tsx);
+	if (fs &#x3c; 1)
+		fs = 1;
+	else if (fs &#x3e; 10)
+		fs = 10;
+
+	var key = this.g_font.FontSize + (fs &#x3c; 10 ? &#x27;-0&#x27; : &#x27;-&#x27;) + fs;
+
+	// Has the font been loaded?
+	if (!BWIPJS.fonts.OCRB || !BWIPJS.fonts.OCRB[key])
+		// Invoke the file loader
+		BWIPJS.load(&#x27;fonts/ocrb&#x27; + key + &#x27;.js&#x27;);
+
+	return !BWIPJS.fonts.OCRB ? undefined : BWIPJS.fonts.OCRB[key];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	if (!BWIPJS.fonts.OCRB || !BWIPJS.fonts.OCRB[key])
+		// Invoke the file loader
+		BWIPJS.load(&#x27;fonts/ocrb&#x27; + key + &#x27;.js&#x27;);
+
+	return !BWIPJS.fonts.OCRB ? undefined : BWIPJS.fonts.OCRB[key];
+}
+BWIPJS.prototype.stringwidth = function(str) {
+	var fn = this.<span class="apidocCodeKeywordSpan">getfont</span>();
+	if (!fn) return { w:0, h:0 };
+
+	// width, ascent, and descent of the char-path
+	var w = 0, a = 0, d = 0;
+	for (var i = 0; i &#x3c; str.length; i++) {
+		var ch = String.fromCharCode(str.get(i));
+		var g  = fn.g[ch];	// The glyph
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.greset" id="apidoc.element.rescode.bwip.prototype.greset">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>greset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greset = function () {
+	// Current Transform Matrix - since we don&#x27;t do rotation, we can fake
+	// the matrix math
+	this.g_tdx	= 0;	// CTM x-offset
+	this.g_tdy	= 0;	// CTM y-offset
+	this.g_tsx	= 1;	// CTM x-scale factor
+	this.g_tsy	= 1;	// CTM y-scale factor
+
+	this.g_posx	= 0;		// current x position
+	this.g_posy	= 0;		// current y position
+	this.g_penw	= 1;		// current line/pen width
+	this.g_path	= [];		// current path
+	this.g_font	= null;		// current font object
+	this.g_rgb  = [0,0,0];	// current color (black)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				//	&#x27; (&#x27; + (this[i][id] instanceof Function) + &#x27;)&#x27;);
+				return this[i][id];
+			}
+		}
+	};
+
+	// Initialize the graphics
+	this.<span class="apidocCodeKeywordSpan">greset</span>();
+};
+
+// Objects for globally registering the encoders and fonts
+BWIPJS.bwipp = {};
+BWIPJS.fonts = {};
+
+// Host-specific overrides
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.grestore" id="apidoc.element.rescode.bwip.prototype.grestore">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>grestore
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grestore = function () {
+	if (!this.gstk.length)
+		throw &#x27;grestore: stack underflow&#x27;;
+	var ctx = this.gstk.pop();
+	for (id in ctx)
+		this[id] = ctx[id];
+
+	// color is part of the bitmap interface and must be restored separately
+	this.bmap.color(this.g_rgb[0], this.g_rgb[1], this.g_rgb[2]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.gsave" id="apidoc.element.rescode.bwip.prototype.gsave">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>gsave
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gsave = function () {
+	// clone all g_ properties
+	var ctx = {};
+	for (id in this)
+		if (id.indexOf(&#x27;g_&#x27;) == 0)
+			ctx[id] = this.gclone(this[id]);
+
+	this.gstk.push(ctx);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.imagemask" id="apidoc.element.rescode.bwip.prototype.imagemask">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>imagemask
+        <span class="apidocSignatureSpan">(width, height, polarity, matrix, source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">imagemask = function (width, height, polarity, matrix, source) {
+	// Extract the matrix values for easier usage
+	var ma = matrix.get(0);
+	var mb = matrix.get(1);
+	var mc = matrix.get(2);
+	var md = matrix.get(3);
+	var mx = matrix.get(4);
+	var my = matrix.get(5);
+	var sx = this.g_tsx;
+	var sy = this.g_tsy;
+	var w2 = width * width;
+	var h2 = height * height;
+	var da = (ma &#x3c; 0 ? 1 : 0);
+	var db = (mb &#x3c; 0 ? 1 : 0);
+	var dc = (mc &#x3c; 0 ? 1 : 0);
+	var dd = (md &#x3c; 0 ? 1 : 0);
+	var rl = Math.ceil(width / 8); 	// row length (bytes per row)
+	for (var y = 0; y &#x3c; height; y++) {
+		for (var x = 0; x &#x3c; width; x++) {
+			var by = source.get(y*rl + Math.floor(x/8));
+			var bt = by &#x26; (1 &#x3c;&#x3c; 7-(x%8));
+			if (bt &#x26;&#x26; !polarity || !bt &#x26;&#x26; polarity)
+				continue;
+			var x0 = Math.floor(this.g_tdx + ((x+da-mx)*ma + (y+dc-my)*mc) * sx / w2);
+			var y0 = Math.floor(this.g_tdy + ((y+dd-my)*md + (x+db-mx)*mb) * sy / h2);
+			var x1 = Math.floor(x0 + sx/width);
+			var y1 = Math.floor(y0 + sy/height);
+			for (var j = y0; j &#x3c; y1; j++) {
+				for (var i = x0; i &#x3c; x1; i++)
+					this.bmap.set(i,j);
+			}
+		}
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.lineto" id="apidoc.element.rescode.bwip.prototype.lineto">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>lineto
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lineto = function (x, y) {
+	this.g_path.push([this.g_posx, this.g_posy]);
+	this.g_path.push([&#x27;l&#x27;]);
+	this.g_posx = this.g_tdx + this.g_tsx * x;
+	this.g_posy = this.g_tdy + this.g_tsy * y;
+	this.g_path.push([this.g_posx, this.g_posy]);
+	BWIPJS.debug(&#x27;lineto: posx,posy=(&#x27; + this.g_posx + &#x27;,&#x27; + this.g_posy + &#x27;)&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.moveto" id="apidoc.element.rescode.bwip.prototype.moveto">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>moveto
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">moveto = function (x, y) {
+	this.g_posx = this.g_tdx + this.g_tsx * x;
+	this.g_posy = this.g_tdy + this.g_tsy * y;
+	BWIPJS.debug(&#x27;moveto: posx,posy=(&#x27; + this.g_posx + &#x27;,&#x27; + this.g_posy + &#x27;)&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.newpath" id="apidoc.element.rescode.bwip.prototype.newpath">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>newpath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">newpath = function () {
+	this.g_path = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.pathbbox" id="apidoc.element.rescode.bwip.prototype.pathbbox">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>pathbbox
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pathbbox = function () {
+	if (!this.g_path.length)	throw &#x27;pathbbox: --nocurrentpoint--&#x27;;
+	var pth = this.g_path;
+	var llx = pth[0][0];
+	var lly = pth[0][1];
+	var urx = 0;
+	var ury = 0;
+	for (var i = 2, inc = 2; i &#x3c; pth.length; i += inc) {
+		if (llx &#x3e; pth[i][0]) llx = pth[i][0];
+		if (urx &#x3c; pth[i][0]) urx = pth[i][0];
+		if (lly &#x3e; pth[i][1]) lly = pth[i][1];
+		if (ury &#x3c; pth[i][1]) ury = pth[i][1];
+		inc = (inc == 2 ? 1 : 2);
+	}
+
+	// Convert to user-space coordinates
+	return { llx:(llx-this.g_tdx)/this.g_tsx, lly:(lly-this.g_tdy)/this.g_tsy,
+			 urx:(urx-this.g_tdx)/this.g_tsx, ury:(ury-this.g_tdy)/this.g_tsy };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.pop" id="apidoc.element.rescode.bwip.prototype.pop">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>pop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pop = function () {
+	if (this.ptr &#x3c;= 0)
+		throw &#x27;--underflow--&#x27;;
+	return this.stk[--this.ptr];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			ctx[id] = this.gclone(this[id]);
+
+	this.gstk.push(ctx);
+}
+BWIPJS.prototype.grestore = function() {
+	if (!this.gstk.length)
+		throw &#x27;grestore: stack underflow&#x27;;
+	var ctx = this.gstk.<span class="apidocCodeKeywordSpan">pop</span>();
+	for (id in ctx)
+		this[id] = ctx[id];
+
+	// color is part of the bitmap interface and must be restored separately
+	this.bmap.color(this.g_rgb[0], this.g_rgb[1], this.g_rgb[2]);
+}
+BWIPJS.prototype.stroke = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.push" id="apidoc.element.rescode.bwip.prototype.push">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>push
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">push = function (v) {
+	this.stk[this.ptr++] = this.value(v);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+BWIPJS.prototype.newpath = function() {
+	this.g_path = [];
+}
+BWIPJS.prototype.closepath = function() {
+	if (this.g_path.length)  {
+		var c0 = this.g_path[0];
+		var c1 = this.g_path[this.g_path.length-1];
+		this.g_path.<span class="apidocCodeKeywordSpan">push</span>([ c1[0], c1[1] ]);
+		this.g_path.push([&#x27;c&#x27;]);
+		this.g_path.push([ c0[0], c0[1] ]);
+	}
+}
+BWIPJS.prototype.moveto = function(x,y) {
+	this.g_posx = this.g_tdx + this.g_tsx * x;
+	this.g_posy = this.g_tdy + this.g_tsy * y;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.rlineto" id="apidoc.element.rescode.bwip.prototype.rlineto">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>rlineto
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rlineto = function (x, y) {
+	this.g_path.push([this.g_posx, this.g_posy]);
+	this.g_path.push([&#x27;l&#x27;]);
+	this.g_posx += this.g_tsx * x;
+	this.g_posy += this.g_tsy * y;
+	this.g_path.push([this.g_posx, this.g_posy]);
+	BWIPJS.debug(&#x27;rlineto: posx,posy=(&#x27; + this.g_posx + &#x27;,&#x27; + this.g_posy + &#x27;)&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	w += (str.length-1) * Math.floor(fn.w/4);	// interchar gap
+	return { w:w/this.g_tsx, h:(a+d)/this.g_tsy };
+}
+BWIPJS.prototype.charpath = function(str, b) {
+	var sw = this.stringwidth(str);
+
+	// Emulate the char-path by placing a rectangle around it
+	this.<span class="apidocCodeKeywordSpan">rlineto</span>(sw.w, 0);
+	this.rlineto(0, sw.h);
+	this.rlineto(-sw.w, 0);
+}
+BWIPJS.prototype.pathbbox = function() {
+	if (!this.g_path.length)	throw &#x27;pathbbox: --nocurrentpoint--&#x27;;
+	var pth = this.g_path;
+	var llx = pth[0][0];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.rmoveto" id="apidoc.element.rescode.bwip.prototype.rmoveto">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>rmoveto
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rmoveto = function (x, y) {
+	this.g_posx += this.g_tsx * x;
+	this.g_posy += this.g_tsy * y;
+	BWIPJS.debug(&#x27;rmoveto: posx,posy=(&#x27; + this.g_posx + &#x27;,&#x27; + this.g_posy + &#x27;)&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.scale" id="apidoc.element.rescode.bwip.prototype.scale">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>scale
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scale = function (x, y) {
+	this.g_tsx *= x;
+	this.g_tsy *= y;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var scaleY = opts.scaleY || 1;
+
+	// GENERATE
+	var bw = new BWIPJS();
+	bw.bitmap(new adapter);
+	bw.push(text);
+	bw.push(opts);
+    bw.<span class="apidocCodeKeywordSpan">scale</span>(scaleX, scaleY);
+
+	bw.call(type);
+	return bw.bitmap().create(rot);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.setcmyk" id="apidoc.element.rescode.bwip.prototype.setcmyk">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setcmyk
+        <span class="apidocSignatureSpan">(c, m, y, k)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setcmyk = function (c, m, y, k) {
+	var r = Math.round((1-c) * (1-k) * 255);
+	var g = Math.round((1-m) * (1-k) * 255);
+	var b = Math.round((1-y) * (1-k) * 255);
+	this.bmap.color(r, g, b);
+	this.g_rgb = [ r, g, b ];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.setfont" id="apidoc.element.rescode.bwip.prototype.setfont">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setfont
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setfont = function (f) {
+	this.g_font = f;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.setlinewidth" id="apidoc.element.rescode.bwip.prototype.setlinewidth">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setlinewidth
+        <span class="apidocSignatureSpan">(w)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setlinewidth = function (w) {
+	this.g_penw = w;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.setrgb" id="apidoc.element.rescode.bwip.prototype.setrgb">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>setrgb
+        <span class="apidocSignatureSpan">(r, g, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setrgb = function (r, g, b) {
+	var r = Math.round(r*255);
+	var g = Math.round(g*255);
+	var b = Math.round(b*255);
+	this.bmap.color(r, g, b);
+	this.g_rgb = [ r, g, b ];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.show" id="apidoc.element.rescode.bwip.prototype.show">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>show
+        <span class="apidocSignatureSpan">(str, dx, dy)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function (str, dx, dy) {	// str is a psstring
+	// The bitmap fonts were crafted to correspond to the scaling factor.
+	// Specifically to render correctly with the UPC/EAN text segments.
+	// Since UPC/EAN is a rather narrow code (in terms of modules/symbol),
+	// the scaling factor works for the other codes as well, including
+	// code128 in numeric mode with two digits per symbol.
+	var fn = this.getfont();
+	if (!fn) return;
+
+	// Convert dx,dy to device space
+	dx = this.g_tsx * dx;
+	dy = this.g_tsy * dy;
+
+	// PostScript renders bottom-up, so we must render the glyphs inverted.
+	for (var i = 0; i &#x3c; str.length; i++) {
+		var ch = String.fromCharCode(str.get(i));
+		var g  = fn.g[ch];	// The glyph
+		if (!g) {
+			this.g_posx += fn.w + Math.floor(fn.w/4) + dx;	// w + interchar-gap
+			continue;
+		}
+		var bm = g.m; 		// The bitmap
+
+		// Adjust for the glyph&#x27;s metrics
+		// The -2: -1 for the usual height-1 accounting;
+		//		   -1 because the bitmap generator has an off-by-one bug
+		//		      that we aren&#x27;t going to fix.
+		var l = this.g_posx + g.l;
+		var t = this.g_posy + g.t + dy - 2;
+
+		var e    = bm.charAt(0);	// encoding
+		var tmin = t - g.h;
+		var lmax = l + g.w;
+		var bx   = 1;		// bitmap index
+		var by;				// current bitmap byte
+		var rl;				// run-length
+
+		if (e == &#x27;b&#x27;) {
+			// uncompressed bit-map
+			for (var y = t; y &#x3e; tmin; y--)
+				for (var x = 0; x &#x3c; g.w; x++) {
+					if (!(x % 8)) {
+						by = (parseInt(bm.charAt(bx),16) &#x3c;&#x3c; 4) | parseInt(bm.charAt(bx+1),16);
+						bx += 2;
+					}
+					if (by &#x26; 0x80)
+						this.bmap.set(l+x, y);
+					by &#x3c;&#x3c;= 1;
+				}
+		} else if (e == &#x27;x&#x27;) {
+			// x-run encoding
+			for (var y = t; y &#x3e; tmin; y--) {
+				for (var x = l; x &#x3c; lmax; ) {
+					by = (parseInt(bm.charAt(bx),16) &#x3c;&#x3c; 4) | parseInt(bm.charAt(bx+1),16);
+					rl = by &#x3e;&#x3e; 1;
+					bx += 2;
+					if (by &#x26; 1) {
+						while (rl--)
+							this.bmap.set(x++, y);
+					} else
+						x += rl;
+				}
+			}
+		} else if (e == &#x27;y&#x27;) {
+			// y-run encoding
+			for (var x = l; x &#x3c; lmax; x++) {
+				for (var y = t; y &#x3e; tmin; ) {
+					by = (parseInt(bm.charAt(bx),16) &#x3c;&#x3c; 4) | parseInt(bm.charAt(bx+1),16);
+					rl = by &#x3e;&#x3e; 1;
+					bx += 2;
+					if (by &#x26; 1) {
+						while (rl--)
+							this.bmap.set(x, y--);
+					} else
+						y -= rl;
+				}
+			}
+		} else
+			throw &#x27;unknown font bitmap encoding: &#x27; + e;
+
+		this.g_posx += Math.max(g.l+g.w, fn.w) + Math.floor(fn.w/4) + dx;
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.stringwidth" id="apidoc.element.rescode.bwip.prototype.stringwidth">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>stringwidth
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stringwidth = function (str) {
+	var fn = this.getfont();
+	if (!fn) return { w:0, h:0 };
+
+	// width, ascent, and descent of the char-path
+	var w = 0, a = 0, d = 0;
+	for (var i = 0; i &#x3c; str.length; i++) {
+		var ch = String.fromCharCode(str.get(i));
+		var g  = fn.g[ch];	// The glyph
+		if (!g) {
+			w += fn.w;		// Normalized char width
+		} else {
+			w += Math.max(g.l + g.w, fn.w);
+			if (g.t &#x3c; 0) {
+				if (d &#x3c; g.h - g.t)
+					d = g.h - g.t;
+			} else {
+				if (a &#x3c; g.t)
+					a = g.t;
+				if (d &#x3c; g.h - g.t)
+					d = g.h - g.t;
+			}
+		}
+	}
+	w += (str.length-1) * Math.floor(fn.w/4);	// interchar gap
+	return { w:w/this.g_tsx, h:(a+d)/this.g_tsy };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+		}
+	}
+	w += (str.length-1) * Math.floor(fn.w/4);	// interchar gap
+	return { w:w/this.g_tsx, h:(a+d)/this.g_tsy };
+}
+BWIPJS.prototype.charpath = function(str, b) {
+	var sw = this.<span class="apidocCodeKeywordSpan">stringwidth</span>(str);
+
+	// Emulate the char-path by placing a rectangle around it
+	this.rlineto(sw.w, 0);
+	this.rlineto(0, sw.h);
+	this.rlineto(-sw.w, 0);
+}
+BWIPJS.prototype.pathbbox = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.stroke" id="apidoc.element.rescode.bwip.prototype.stroke">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>stroke
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stroke = function () {
+	var penx = this.g_penw*this.g_tsx;
+	var peny = this.g_penw*this.g_tsy;
+	var segs = this.g_path.length / 3;	// number of line segments
+	if (this.g_path[this.g_path.length-2][0] == &#x27;c&#x27;)
+		segs--;
+	for (var i = 0; i &#x3c; this.g_path.length; ) {
+		var s = this.g_path[i++];	// start point
+		var a = this.g_path[i++];	// args
+		var e = this.g_path[i++];	// end point
+		switch (a[0]) {
+		case &#x27;l&#x27;:	// line
+			this.drawline(true, s[0], s[1], e[0], e[1], penx, peny, segs &#x3e; 1);
+			break;
+		case &#x27;a&#x27;:
+			this.drawarc(s[0], s[1], e[0], e[1], a[1].sa, a[1].se, penx, peny);
+			break;
+		case &#x27;c&#x27;:	// closepath
+			break;
+		default:
+			throw &#x27;stroke: undefined opcode: &#x27; + a[0];
+		}
+	}
+	this.g_path = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.translate" id="apidoc.element.rescode.bwip.prototype.translate">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>translate
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">translate = function (x, y) {
+	this.g_tdx = this.g_tsx * x;
+	this.g_tdy = this.g_tsy * y;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.bwip.prototype.value" id="apidoc.element.rescode.bwip.prototype.value">
+        function <span class="apidocSignatureSpan">rescode.bwip.prototype.</span>value
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">value = function (v) {
+	if (v === true || v === false || v === null)
+		return v;
+
+	var t = typeof(v);
+	if (t == &#x27;number&#x27;)
+		return v;
+	if (t == &#x27;string&#x27;)
+		return BWIPJS.psstring(v);
+	if (v instanceof Array)
+		return BWIPJS.psarray(v);
+	return v;	// s.b. a dictionary object
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return BWIPJS.psstring(v);
+	if (v instanceof Array)
+		return BWIPJS.psarray(v);
+	return v;	// s.b. a dictionary object
+}
+
+BWIPJS.prototype.push = function(v) {
+	this.stk[this.ptr++] = this.<span class="apidocCodeKeywordSpan">value</span>(v);
+}
+
+BWIPJS.prototype.pop = function() {
+	if (this.ptr &#x3c;= 0)
+		throw &#x27;--underflow--&#x27;;
+	return this.stk[--this.ptr];
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.rescode.codes" id="apidoc.module.rescode.codes">module rescode.codes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.codes.create" id="apidoc.element.rescode.codes.create">
+        function <span class="apidocSignatureSpan">rescode.codes.</span>create
+        <span class="apidocSignatureSpan">( type, text, options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function ( type, text, options )
+{
+	// CODER AVAILABLE
+    var opts = ( types[ type ] ) ? options || types[ type ] : null;
+
+    // BAD REQUEST
+    if( !type || !text || !opts ) return null;
+
+	// DEFAULTS
+	var rot = opts.rot || &#x22;N&#x22;;
+	var scaleX = opts.scaleX || 1;
+	var scaleY = opts.scaleY || 1;
+
+	// GENERATE
+	var bw = new BWIPJS();
+	bw.bitmap(new adapter);
+	bw.push(text);
+	bw.push(opts);
+    bw.scale(scaleX, scaleY);
+
+	bw.call(type);
+	return bw.bitmap().create(rot);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var codes = require(&#x22;rescode&#x22;);
+
+	function( res, req )
+	{
+// Sequence is important
+		codes.loadModules([&#x22;ean2&#x22;, &#x22;ean5&#x22;, &#x22;ean8&#x22;, &#x22;ean13&#x22;]);
+		
+		var data8 = codes.<span class="apidocCodeKeywordSpan">create</span>(&#x22;ean8&#x22;,&#x22;12345678&#x22;);
+
+res.setHeader(&#x22;Content-Type&#x22;,&#x22;image/png&#x22;);
+		res.end( data8 );
+
+OR
+
+res.end(&#x22;&#x3c;html&#x3e;&#x3c;img src=&#x27;data:image/png;base64,&#x22;+data8.toString(&#x22;base64&#x22;)+&#x22;&#x27; /&#
+x3e;&#x3c;/html&#x3e;&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.rescode.codes.loadModules" id="apidoc.element.rescode.codes.loadModules">
+        function <span class="apidocSignatureSpan">rescode.codes.</span>loadModules
+        <span class="apidocSignatureSpan">(modules, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadModules = function (modules, opts)
+{
+        modules.forEach(function(m) {
+				types.addExport(m, opts ? opts : { &#x22;includetext&#x22;:true, &#x22;guardwhitespace&#x22;:false, &#x22;inkspread&#x22;:0, scaleX:2, textyoffset:-15 });
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Example loading specific barcode types
+---------------------------------------
+	var codes = require(&#x22;rescode&#x22;);
+
+	function( res, req )
+	{
+// Sequence is important
+		codes.<span class="apidocCodeKeywordSpan">loadModules</span>([&#x22;ean2&#x22;, &#x22;ean5&#x22;, &#x22;ean8&#x22;, &#x22;ean13
+&#x22;]);
+		
+		var data8 = codes.create(&#x22;ean8&#x22;,&#x22;12345678&#x22;);
+
+res.setHeader(&#x22;Content-Type&#x22;,&#x22;image/png&#x22;);
+		res.end( data8 );
+
+OR
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
